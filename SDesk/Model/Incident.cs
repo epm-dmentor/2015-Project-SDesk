@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Epam.Sdesk.DBModel
+namespace Epam.Sdesk.Model
 {
     public class Incident
     {
