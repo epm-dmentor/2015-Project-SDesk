@@ -39,8 +39,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Incident.cs" />
+    <Compile Include="Attachement.cs" />
+    <Compile Include="JiraItem.cs" />
+    <Compile Include="JiraSource.cs" />
+    <Compile Include="Mail.cs" />
+    <Compile Include="MailTemplate.cs" />
+    <Compile Include="Priority.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Request.cs" />
+    <Compile Include="RequestEmailAnswer.cs" />
+    <Compile Include="User.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
