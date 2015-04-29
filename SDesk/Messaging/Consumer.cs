@@ -73,6 +73,7 @@ namespace Epam.Sdesk.Messaging
                     var entity = serializer.Deserialize(body);
                     OnMessageReceived(entity);
                     subscription.Ack(message);
+                    _log.Info("Received Message from queue :" +queue + " message: "+ body);
                 }
             }
         }
