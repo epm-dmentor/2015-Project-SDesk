@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
-namespace DataAccess
+namespace Epam.Sdesk.DataAccess
 {
     public interface IRepository<T> where T: class
     {

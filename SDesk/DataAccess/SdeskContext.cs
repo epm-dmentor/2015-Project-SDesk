@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity;
 using Epam.Sdesk.Model;
 
-namespace DataAccess
+namespace Epam.Sdesk.DataAccess
 {
     public class SdeskContext:DbContext
     {

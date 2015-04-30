@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DataAccess
+namespace Epam.Sdesk.DataAccess
 {
     public interface IUnitOfWork:IDisposable
     {

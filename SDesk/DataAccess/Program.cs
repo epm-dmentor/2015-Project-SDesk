@@ -2,7 +2,7 @@
 using System.Linq;
 using Epam.Sdesk.Model;
 
-namespace DataAccess
+namespace Epam.Sdesk.DataAccess
 {
     class Program
     {

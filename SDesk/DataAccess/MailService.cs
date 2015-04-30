@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Epam.Sdesk.Model;
 
-namespace DataAccess
+namespace Epam.Sdesk.DataAccess
 {
     public class MailService
     {

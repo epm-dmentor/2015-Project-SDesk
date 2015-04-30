@@ -7,8 +7,8 @@
     <ProjectGuid>{703E81ED-43D9-4570-9733-6E071DAD6A48}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DataAccess</RootNamespace>
-    <AssemblyName>DataAccess</AssemblyName>
+    <RootNamespace>Epam.Sdesk.DataAccess</RootNamespace>
+    <AssemblyName>Epam.Sdesk.DataAccess</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

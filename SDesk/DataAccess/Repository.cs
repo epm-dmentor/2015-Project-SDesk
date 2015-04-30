@@ -4,7 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace DataAccess
+namespace Epam.Sdesk.DataAccess
 {
     public class Repository<T> : IRepository<T> where T : class
     {
