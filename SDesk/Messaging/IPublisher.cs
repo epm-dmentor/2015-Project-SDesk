@@ -4,6 +4,6 @@ namespace Epam.Sdesk.Messaging
 {
     public interface IPublisher<T> where T : new()
     {
-        Task Publish(T messageEntity);
+        Task PublishAsync(T messageEntity);
     }
 }

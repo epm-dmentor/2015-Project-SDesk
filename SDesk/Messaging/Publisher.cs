@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Epam.Sdesk.Messaging
 {
-    public class Publisher<T> : IPublisher<T> where T:new()
+    public class Publisher<T> : IPublisher<T> where T : new()
     {
 
         #region Fields
@@ -38,7 +38,7 @@ namespace Epam.Sdesk.Messaging
         /// </summary>
         /// <param name="messageEntity"></param>
         /// <returns></returns>
-        public async Task Publish(T messageEntity)
+        public async Task PublishAsync(T messageEntity)
         {
             await Task.Factory.StartNew(() =>
             {
@@ -56,6 +56,24 @@ namespace Epam.Sdesk.Messaging
                 }
             });
         }
+
+        public void Publish(T messageEntity)
+        {
+            var serializer = new Serializer<T>();
+            var service = new MessagingService();
+            using (var connection = service.GetRabbitMqConnection())
+            {
+                var model = connection.CreateModel();
+                service.SetUpExchangeAndQueues(model);
+                var basicProperties = model.CreateBasicProperties();
+                basicProperties.SetPersistent(true);
+                var messageBytes = serializer.Serialize(messageEntity);
+                model.BasicPublish(_exchangeName, "", basicProperties, messageBytes);
+                _log.Info("Message has been published to Exchange " + _exchangeName);
+            }
+
+        }
+
         #endregion
     }
 }
