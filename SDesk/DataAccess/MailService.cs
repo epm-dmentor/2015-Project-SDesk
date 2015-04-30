@@ -6,7 +6,7 @@ namespace DataAccess
     public class MailService
     {
         private IRepository<Mail> _repo;
-
+     
         public MailService(IUnitOfWork unit)
         {
             _repo = unit.GetRepository<Mail>();
